@@ -1,5 +1,3 @@
-👇
-
 🚀 Portfolio – Frontend Developer
 
 A modern and responsive frontend portfolio website showcasing my projects, skills, and real-world work. Built with React and modern UI practices to deliver a clean and interactive user experience.
