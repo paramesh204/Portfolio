@@ -9,11 +9,13 @@ A modern and responsive frontend portfolio website showcasing my projects, skill
 ⚡ Fast performance using Vite
 🖼️ Project showcase with live links
 📊 Real-world project: Invoice Validation System (OCR-based)
+
 🛠️ Tech Stack
 Frontend: React, TypeScript
 Styling: Tailwind CSS
 Build Tool: Vite
 Icons: Lucide React
+
 📂 Project Structure
 src/
  ├── assets/        # Images & static files
@@ -29,6 +31,7 @@ cd portfolio
 npm install
 3. Run the project
 npm run dev
+
 🌐 Live Demo
 
 👉 Add your deployed link here
@@ -45,13 +48,8 @@ OCR-based system that extracts and validates invoice data with real-time dashboa
 Responsive shopping UI with product display and modern design.
 🌦️ Weather App
 API-based weather dashboard with real-time data.
+
 📫 Contact
-💼 LinkedIn: https://linkedin.com/in/your-profile
-📧 Email: your-email@gmail.com
-⭐ Acknowledgements
+💼 LinkedIn: https://www.linkedin.com/in/paramesh04/
+📧 Email: shreeparamesh204@gmail.com
 
-Inspired by modern UI/UX design practices and real-world product dashboards.
-
-🏁 License
-
-This project is open source and available under the MIT License.
