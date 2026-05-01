@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+👇
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Portfolio – Frontend Developer
 
-Currently, two official plugins are available:
+A modern and responsive frontend portfolio website showcasing my projects, skills, and real-world work. Built with React and modern UI practices to deliver a clean and interactive user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌟 Features
+🎨 Modern UI with smooth animations
+📱 Fully responsive (mobile + desktop)
+🧩 Component-based architecture
+⚡ Fast performance using Vite
+🖼️ Project showcase with live links
+📊 Real-world project: Invoice Validation System (OCR-based)
+🛠️ Tech Stack
+Frontend: React, TypeScript
+Styling: Tailwind CSS
+Build Tool: Vite
+Icons: Lucide React
+📂 Project Structure
+src/
+ ├── assets/        # Images & static files
+ ├── components/    # UI components
+ ├── pages/         # Pages
+ ├── hooks/         # Custom hooks
+ └── main.tsx       # Entry point
+🚀 Getting Started
+1. Clone the repository
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+2. Install dependencies
+npm install
+3. Run the project
+npm run dev
+🌐 Live Demo
 
-## React Compiler
+👉 Add your deployed link here
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://your-portfolio.netlify.app
+📸 Screenshots
 
-## Expanding the ESLint configuration
+Add screenshots of your portfolio here (Dashboard, Projects, UI)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📌 Projects Highlight
+📦 Invoice Validation System
+OCR-based system that extracts and validates invoice data with real-time dashboard and audit workflow.
+🛒 E-Commerce UI
+Responsive shopping UI with product display and modern design.
+🌦️ Weather App
+API-based weather dashboard with real-time data.
+📫 Contact
+💼 LinkedIn: https://linkedin.com/in/your-profile
+📧 Email: your-email@gmail.com
+⭐ Acknowledgements
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Inspired by modern UI/UX design practices and real-world product dashboards.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🏁 License
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is open source and available under the MIT License.
