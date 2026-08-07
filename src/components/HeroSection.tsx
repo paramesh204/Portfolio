@@ -1,102 +1,93 @@
-import { ArrowDown, Github, Linkedin, Mail, Sparkles } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import React from "react";
+import { Linkedin, Mail, Github } from "lucide-react";
+import profilePhoto from "@/assets/paramesh.png";
 
 const HeroSection = () => {
-    return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black text-white pt-24 sm:pt-28">
+  // Resume download handler
+  const handleDownloadResume = () => {
+    window.open("/path-to-your-resume.pdf", "_blank");
+  };
 
-            {/* Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-black to-blue-900/40" />
+  const socialLinks = [
+    { icon: Linkedin, href: "https://www.linkedin.com/in/paramesh04/" },
+    { icon: Mail, href: "mailto:shreeparamesh204@gmail.com" },
+    { icon: Github, href: "https://github.com/paramesh204" }
+  ];
 
-            <div
-                className="absolute inset-0 opacity-20 animate-slow-zoom"
-                style={{
-                    backgroundImage: `url(${heroBg})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                }}
-            />
+  return (
+    <section className="min-h-screen bg-[#1f242d] text-white flex items-center justify-center px-4 sm:px-12 md:px-24 py-12 md:py-16 overflow-y-auto select-none">
+      <div className="w-full max-w-7xl mx-auto flex flex-col md:grid md:grid-cols-2 gap-10 md:gap-6 items-center">
 
-            {/* Glow */}
-            <div className="absolute top-20 left-5 sm:left-20 w-40 sm:w-72 h-40 sm:h-72 bg-purple-500/20 rounded-full blur-3xl animate-float" />
-            <div className="absolute bottom-20 right-5 sm:right-20 w-56 sm:w-96 h-56 sm:h-96 bg-blue-500/20 rounded-full blur-3xl animate-float-reverse" />
+        {/* LEFT COLUMN: TEXT CONTENT & SOCIALS */}
+        <div className="w-full flex flex-col justify-center text-center md:text-left order-2 md:order-1 z-10 px-2">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-white mb-2">
+            HELLO, IT'S ME
+          </h3>
 
-            {/* Content */}
-            <div className="relative z-10 w-full max-w-3xl sm:max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          {/* Responsive Heading: Perfect font scaling to prevent overflow on Mobile, Laptop, and Desktop */}
+          <h1 className="text-[7.5vw] xs:text-[6.5vw] sm:text-4xl md:text-[3.5vw] lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white mb-4 leading-tight break-keep ">
+            Shreeparameshwaran <span className="inline-block md:block lg:inline-block">S</span>
+          </h1>
 
-                {/* Badge */}
-                <div className="flex justify-center mb-6 sm:mb-8">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-500/10 text-purple-300 text-xs sm:text-sm font-medium backdrop-blur-md">
-                        <Sparkles size={14} className="animate-pulse" />
-                        Open to Opportunities
-                    </div>
-                </div>
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-6 leading-snug">
+            I'm a Graduate who is passionate in{" "}
+            <span className="text-[#00eeff] inline-block drop-shadow-[0_0_10px_rgba(0,238,255,0.6)]">
+              Full-Stack Development|
+            </span>
+          </h2>
 
-                {/* Heading (PERFECT FIX) */}
-                <h1 className="font-bold leading-tight tracking-tight">
+          <p className="text-xs sm:text-sm md:text-base text-gray-300 max-w-lg leading-relaxed mb-8 mx-auto md:mx-0">
+            Building scalable web apps with React, Node.js, and modern UI architectures.
+            Turning ideas into powerful digital experiences with elegant layouts and optimized logic.
+          </p>
 
-                    <span className="block text-[clamp(1.5rem,4vw,3rem)]">
-                        Hi, I'm
-                    </span>
+          {/* Social Icons Container */}
+          <div className="flex items-center justify-center md:justify-start gap-4 mb-8">
+            {socialLinks.map(({ icon: Icon, href }, index) => (
+              <a
+                key={index}
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border-2 border-[#00eeff] text-[#00eeff] flex items-center justify-center bg-transparent transition-all duration-300 hover:bg-[#00eeff] hover:text-[#1f242d] hover:shadow-[0_0_15px_#00eeff] hover:-translate-y-1"
+              >
+                <Icon size={18} strokeWidth={2.5} />
+              </a>
+            ))}
+          </div>
 
-                    <span className="block mt-2 bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 bg-clip-text text-transparent text-[clamp(1.4rem,5vw,3.5rem)] leading-tight break-keep">
-                        Shreeparameshwaran S
-                    </span>
+          {/* Action Button */}
+          <div className="flex justify-center md:justify-start">
 
-                </h1>
 
-                {/* Subtitle */}
-                <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg text-gray-400 max-w-xl mx-auto leading-relaxed">
-                    Full Stack Developer building scalable web apps with React, Node.js, and modern UI.
-                    Turning ideas into powerful digital experiences 🚀
-                </p>
+          </div>
+        </div>
 
-                {/* Social Icons */}
-                <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8">
-                    {[
-                        { icon: Github, href: "https://github.com/paramesh204" },
-                        { icon: Linkedin, href: "https://www.linkedin.com/in/paramesh04/" },
-                        { icon: Mail, href: "mailto:shreeparamesh204@gmail.com" }
-                    ].map(({ icon: Icon, href }) => (
-                        <a
-                            key={href}
-                            href={href}
-                            target={href.startsWith("mailto") ? undefined : "_blank"}
-                            rel="noopener noreferrer"
-                            className="p-2.5 sm:p-3 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-purple-400 transition-all duration-300 hover:scale-110"
-                        >
-                            <Icon size={18} />
-                        </a>
-                    ))}
-                </div>
+        {/* RIGHT COLUMN: LARGE PORTRAIT WITH TEAL GLOW */}
+        <div className="w-full flex justify-center items-center order-1 md:order-2 z-10 mt-4 md:mt-0">
+          <div className="relative w-48 h-48 sm:w-72 sm:h-72 md:w-[24rem] md:h-[24rem] lg:w-[26rem] lg:h-[26rem] flex items-center justify-center">
 
-                {/* Buttons */}
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8 sm:mt-10">
+            {/* Background Radial Glow Effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#00eeff] to-transparent opacity-40 md:opacity-60 blur-2xl animate-pulse" />
 
-                    <a
-                        href="#projects"
-                        className="w-full sm:w-auto text-center px-6 sm:px-8 py-3 rounded-xl font-medium bg-gradient-to-r from-purple-500 to-blue-500 hover:from-pink-500 hover:to-purple-500 transition-all duration-300"
-                    >
-                        🚀 View My Work
-                    </a>
+            {/* Outer Circular Boundary matching Template's Cyan Accent */}
+            <div className="absolute inset-1.5 rounded-full border-4 border-transparent bg-gradient-to-tr from-[#00eeff] via-[#00eeff]/20 to-[#00eeff] shadow-[0_0_30px_rgba(0,238,255,0.3)] md:shadow-[0_0_40px_rgba(0,238,255,0.4)]" />
 
-                    <a
-                        href="#contact"
-                        className="w-full sm:w-auto text-center px-6 sm:px-8 py-3 rounded-xl border border-white/20 backdrop-blur-md hover:border-purple-400 transition-all duration-300"
-                    >
-                        📩 Contact Me
-                    </a>
-
-                </div>
-
-                {/* Scroll */}
-                <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 animate-bounce-smooth text-gray-400">
-                    <ArrowDown size={20} />
-                </div>
-
+            {/* Inner Mask Container for Image */}
+            <div className="relative w-[92%] h-[92%] rounded-full overflow-hidden bg-gradient-to-b from-[#00eeff]/20 to-[#1f242d] flex items-center justify-center border border-[#00eeff]/30">
+              <img
+                src={profilePhoto}
+                alt="Shreeparameshwaran S"
+                className="w-full h-full object-cover object-top scale-105 transition-transform duration-500 hover:scale-110"
+              />
             </div>
-        </section>
-    );
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
 };
 
 export default HeroSection;
