@@ -27,13 +27,12 @@ const HeroSection = () => {
           {/* Responsive Heading: Perfect font scaling to prevent overflow on Mobile, Laptop, and Desktop */}
 <h1 className="w-full max-w-full text-[22px] sm:text-4xl md:text-[3.5vw] lg:text-5xl xl:text-6xl font-normal tracking-tight text-white mb-4 leading-tight text-center md:text-left">
   Shreeparameshwaran{" "}
-  <span className="inline-block">S</span>
 </h1>
 
           <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-6 leading-snug">
             I'm a Graduate who is passionate in{" "}
             <span className="text-[#00eeff] inline-block drop-shadow-[0_0_10px_rgba(0,238,255,0.6)]">
-              Full-Stack|
+              Full-Stack Development|
             </span>
           </h2>
 
