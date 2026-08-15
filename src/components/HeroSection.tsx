@@ -32,7 +32,7 @@ const HeroSection = () => {
           <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-6 leading-snug">
             I'm a Graduate who is passionate in{" "}
             <span className="text-[#00eeff] inline-block drop-shadow-[0_0_10px_rgba(0,238,255,0.6)]">
-              Full-Stack Development|
+              Full-Stack|
             </span>
           </h2>
 
